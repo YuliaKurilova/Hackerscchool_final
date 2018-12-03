@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.7.0 on darwin)" generated="20181204 00:35:04.304">
+<suite id="s1" name="Hackerscchool final" source="/Users/Julia/hackerschool_final/Hackerscchool_final">
+<suite id="s1-s1" name="Tests" source="/Users/Julia/hackerschool_final/Hackerscchool_final/Tests">
+<suite id="s1-s1-s1" name="Test" source="/Users/Julia/hackerschool_final/Hackerscchool_final/Tests/Test.robot">
+<kw name="Open Browser To Orangehrmlive" library="Hrm_Keywords" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://opensource-demo.orangehrmlive.com/</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20181204 00:35:05.607" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" starttime="20181204 00:35:05.605" endtime="20181204 00:35:13.559"></status>
+</kw>
+<status status="PASS" starttime="20181204 00:35:05.604" endtime="20181204 00:35:13.561"></status>
+</kw>
+<test id="s1-s1-s1-t1" name="Login Admin">
+<kw name="Login" library="Hrm_Keywords">
+<arguments>
+<arg>${admin_loginname}</arg>
+<arg>${admin_password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${username_input}</arg>
+<arg>${admin_loginname}</arg>
+</arguments>
+<msg timestamp="20181204 00:35:13.570" level="INFO">Typing text 'Admin' into text field 'id=txtUsername'.</msg>
+<status status="PASS" starttime="20181204 00:35:13.567" endtime="20181204 00:35:14.430"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${password_input}</arg>
+<arg>${admin_password}</arg>
+</arguments>
+<msg timestamp="20181204 00:35:14.431" level="INFO">Typing password into text field 'id=txtPassword'.</msg>
+<status status="PASS" starttime="20181204 00:35:14.430" endtime="20181204 00:35:14.770"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${login_button}</arg>
+</arguments>
+<msg timestamp="20181204 00:35:14.778" level="INFO">Clicking button 'id=btnLogin'.</msg>
+<status status="PASS" starttime="20181204 00:35:14.776" endtime="20181204 00:35:16.577"></status>
+</kw>
+<status status="PASS" starttime="20181204 00:35:13.564" endtime="20181204 00:35:16.581"></status>
+</kw>
+<status status="PASS" starttime="20181204 00:35:13.562" endtime="20181204 00:35:16.582" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t2" name="Open Recruitment / Vacancies section">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20181204 00:35:19.593" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20181204 00:35:16.588" endtime="20181204 00:35:19.596"></status>
+</kw>
+<kw name="Open Sections" library="Hrm_Keywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${recruitment_tab}</arg>
+</arguments>
+<status status="PASS" starttime="20181204 00:35:19.600" endtime="20181204 00:35:19.633"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${recruitment_tab}</arg>
+</arguments>
+<msg timestamp="20181204 00:35:19.636" level="INFO">Clicking element 'id=menu_recruitment_viewRecruitmentModule'.</msg>
+<status status="PASS" starttime="20181204 00:35:19.634" endtime="20181204 00:35:21.396"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${vacancies_subtab}</arg>
+</arguments>
+<msg timestamp="20181204 00:35:21.398" level="INFO">Clicking element 'id=menu_recruitment_viewJobVacancy'.</msg>
+<status status="PASS" starttime="20181204 00:35:21.397" endtime="20181204 00:35:22.625"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${open_vacancy_form}</arg>
+</arguments>
+<status status="PASS" starttime="20181204 00:35:22.628" endtime="20181204 00:35:22.699"></status>
+</kw>
+<status status="PASS" starttime="20181204 00:35:19.597" endtime="20181204 00:35:22.700"></status>
+</kw>
+<status status="PASS" starttime="20181204 00:35:16.585" endtime="20181204 00:35:22.701" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t3" name="Open new vacancy form">
+<kw name="Open form" library="Hrm_Keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${open_vacancy_form}</arg>
+</arguments>
+<msg timestamp="20181204 00:35:22.713" level="INFO">Clicking element 'name=btnAdd'.</msg>
+<status status="PASS" starttime="20181204 00:35:22.712" endtime="20181204 00:35:23.800"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${job_title_select}</arg>
+</arguments>
+<status status="PASS" starttime="20181204 00:35:23.801" endtime="20181204 00:35:23.924"></status>
+</kw>
+<status status="PASS" starttime="20181204 00:35:22.710" endtime="20181204 00:35:23.925"></status>
+</kw>
+<status status="PASS" starttime="20181204 00:35:22.708" endtime="20181204 00:35:23.925" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t4" name="Fill in the new vacancies form and save it">
+<kw name="Fill in form and save" library="Hrm_Keywords">
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>${job_title_select}</arg>
+<arg>8</arg>
+</arguments>
+<msg timestamp="20181204 00:35:23.934" level="INFO">Selecting options from selection list 'id=addJobVacancy_jobTitle' by value 8.</msg>
+<status status="PASS" starttime="20181204 00:35:23.933" endtime="20181204 00:35:24.210"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${vacancy_name_input}</arg>
+<arg>Julia</arg>
+</arguments>
+<msg timestamp="20181204 00:35:24.220" level="INFO">Typing text 'Julia' into text field 'id=addJobVacancy_name'.</msg>
+<status status="PASS" starttime="20181204 00:35:24.212" endtime="20181204 00:35:24.545"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${hiring_manager_input}</arg>
+<arg>${hiring_manager}</arg>
+</arguments>
+<msg timestamp="20181204 00:35:24.563" level="INFO">Typing text 'John Smith' into text field 'id=addJobVacancy_hiringManager'.</msg>
+<status status="PASS" starttime="20181204 00:35:24.546" endtime="20181204 00:35:25.148"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${number_of_positions_input}</arg>
+<arg>${number_of_positions}</arg>
+</arguments>
+<msg timestamp="20181204 00:35:25.156" level="INFO">Typing text '1' into text field 'id=addJobVacancy_noOfPositions'.</msg>
+<status status="PASS" starttime="20181204 00:35:25.149" endtime="20181204 00:35:25.435"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${description_textarea}</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20181204 00:35:25.437" level="INFO">Typing text 'Description' into text field 'id=addJobVacancy_description'.</msg>
+<status status="PASS" starttime="20181204 00:35:25.435" endtime="20181204 00:35:25.971"></status>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<doc>Selects checkbox identified by ``locator``.</doc>
+<arguments>
+<arg>${vacancy_status_checkbox}</arg>
+</arguments>
+<msg timestamp="20181204 00:35:25.974" level="INFO">Selecting checkbox 'id=addJobVacancy_status'.</msg>
+<status status="PASS" starttime="20181204 00:35:25.972" endtime="20181204 00:35:26.151"></status>
+</kw>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<arguments>
+<arg>${vacancy_status_checkbox}</arg>
+</arguments>
+<msg timestamp="20181204 00:35:26.163" level="INFO">Verifying checkbox 'id=addJobVacancy_status' is selected.</msg>
+<status status="PASS" starttime="20181204 00:35:26.159" endtime="20181204 00:35:26.281"></status>
+</kw>
+<kw name="Unselect Checkbox" library="SeleniumLibrary">
+<doc>Removes selection of checkbox identified by ``locator``.</doc>
+<arguments>
+<arg>${publish_in_rss_checkbox}</arg>
+</arguments>
+<msg timestamp="20181204 00:35:26.284" level="INFO">Unselecting checkbox 'id=addJobVacancy_publishedInFeed'.</msg>
+<status status="PASS" starttime="20181204 00:35:26.282" endtime="20181204 00:35:26.714"></status>
+</kw>
+<kw name="Checkbox Should Not Be Selected" library="SeleniumLibrary">
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<arguments>
+<arg>${publish_in_rss_checkbox}</arg>
+</arguments>
+<msg timestamp="20181204 00:35:26.718" level="INFO">Verifying checkbox 'id=addJobVacancy_publishedInFeed' is not selected.</msg>
+<status status="PASS" starttime="20181204 00:35:26.716" endtime="20181204 00:35:26.825"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${save_vacancy_button}</arg>
+</arguments>
+<msg timestamp="20181204 00:35:26.827" level="INFO">Clicking button 'id=btnSave'.</msg>
+<status status="PASS" starttime="20181204 00:35:26.826" endtime="20181204 00:35:28.456"></status>
+</kw>
+<status status="PASS" starttime="20181204 00:35:23.932" endtime="20181204 00:35:28.457"></status>
+</kw>
+<kw name="Verify Saving Vacancy" library="Hrm_Keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${vacancies_subtab}</arg>
+</arguments>
+<msg timestamp="20181204 00:35:28.463" level="INFO">Clicking element 'id=menu_recruitment_viewJobVacancy'.</msg>
+<status status="PASS" starttime="20181204 00:35:28.461" endtime="20181204 00:35:29.488"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Julia</arg>
+</arguments>
+<msg timestamp="20181204 00:35:29.600" level="INFO">Current page contains text 'Julia'.</msg>
+<status status="PASS" starttime="20181204 00:35:29.489" endtime="20181204 00:35:29.601"></status>
+</kw>
+<status status="PASS" starttime="20181204 00:35:28.458" endtime="20181204 00:35:29.601"></status>
+</kw>
+<status status="PASS" starttime="20181204 00:35:23.931" endtime="20181204 00:35:29.602" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t5" name="Test">
+<kw name="Get Vacancy Name" library="Hrm_Keywords">
+<arguments>
+<arg>${prefix}</arg>
+</arguments>
+<assign>
+<var>${vacancy_name}</var>
+</assign>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>int(round(time.time() * 1000))</arg>
+<arg>time</arg>
+</arguments>
+<assign>
+<var>${time_in_ms}</var>
+</assign>
+<msg timestamp="20181204 00:35:29.612" level="INFO">${time_in_ms} = 1543880129612</msg>
+<status status="PASS" starttime="20181204 00:35:29.611" endtime="20181204 00:35:29.614"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${prefix}${time_in_ms}</arg>
+</arguments>
+<assign>
+<var>${vacancy_name}</var>
+</assign>
+<msg timestamp="20181204 00:35:29.625" level="INFO">${vacancy_name} = Julia1543880129612</msg>
+<status status="PASS" starttime="20181204 00:35:29.615" endtime="20181204 00:35:29.625"></status>
+</kw>
+<msg timestamp="20181204 00:35:29.626" level="INFO">${vacancy_name} = Julia1543880129612</msg>
+<status status="PASS" starttime="20181204 00:35:29.609" endtime="20181204 00:35:29.627"></status>
+</kw>
+<status status="PASS" starttime="20181204 00:35:29.607" endtime="20181204 00:35:29.636" critical="yes"></status>
+</test>
+<kw name="Capture Screenshot And Close browser" library="Hrm_Keywords" type="teardown">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20181204 00:35:30.193" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20181204 00:35:29.649" endtime="20181204 00:35:30.195"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20181204 00:35:30.196" endtime="20181204 00:35:30.610"></status>
+</kw>
+<status status="PASS" starttime="20181204 00:35:29.642" endtime="20181204 00:35:30.611"></status>
+</kw>
+<status status="PASS" starttime="20181204 00:35:04.770" endtime="20181204 00:35:30.612"></status>
+</suite>
+<status status="PASS" starttime="20181204 00:35:04.751" endtime="20181204 00:35:30.763"></status>
+</suite>
+<status status="PASS" starttime="20181204 00:35:04.608" endtime="20181204 00:35:30.842"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0">Critical Tests</stat>
+<stat pass="5" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" id="s1" name="Hackerscchool final">Hackerscchool final</stat>
+<stat pass="5" fail="0" id="s1-s1" name="Tests">Hackerscchool final.Tests</stat>
+<stat pass="5" fail="0" id="s1-s1-s1" name="Test">Hackerscchool final.Tests.Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

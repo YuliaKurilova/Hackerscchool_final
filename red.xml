@@ -2,7 +2,7 @@
 <projectConfiguration>
     <configVersion>2</configVersion>
     <relativeTo>WORKSPACE</relativeTo>
-    <referencedLibrary type="PYTHON" name="SeleniumLibrary" path="C:/Python34/Lib/site-packages"/>
+    <referencedLibrary type="PYTHON" name="SeleniumLibrary" path="/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages"/>
     <pythonpath/>
     <classpath/>
     <excludedForValidation/>

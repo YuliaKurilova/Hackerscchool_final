@@ -21,6 +21,8 @@ vacancy_status_checkbox = "id=addJobVacancy_status"
 publish_in_rss_checkbox = "id=addJobVacancy_publishedInFeed"
 save_vacancy_button = "id=btnSave"
 vacancy_select = "id=vacancySearch_jobVacancy"
+search_button = "id=btnSrch"
+select_vacancy_profile = "id=ohrmList_chkSelectRecord_1"
 
 #modal
 confirm_deletion_button = "id=dialogDeleteBtn"

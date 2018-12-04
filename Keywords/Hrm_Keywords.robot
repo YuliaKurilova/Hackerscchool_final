@@ -37,8 +37,16 @@ Fill in form and save
     Click Button    ${save_vacancy_button}
 Verify Saving Vacancy
     Click Element    ${vacancies_subtab} 
-    Page Should Contain    Julia    
-                          
+    Page Should Contain    Julia   
+
+#Delete vacancy
+    #Select All From List        ${vacancy_select}    Julia
+    #Click Button    ${search_button}
+    #Select Checkbox    ${select_vacancy_profile}
+    #Click Button    ${delete_vacancy_button}
+    #Click Button    ${confirm_deletion_button}
+    #Page Should Not Contain    Julia    
+                         
     
     
 Get Vacancy Name
